@@ -36,8 +36,8 @@ export default function Home() {
             Porto Belo, SC
           </div>
         </section>
-
-        <section id="brigadeiros" className="space-y-8">
+        
+        <section id="brigadeiros" className="mt-10 space-y-4">
           <header className="text-center">
             <h2 className="font-brand text-3xl text-brand">Brigadeiros</h2>
           </header>
@@ -137,6 +137,101 @@ export default function Home() {
               <WhatsAppIcon className="text-white" />
               Peça pelo WhatsApp
             </Button>
+          </div>
+        </section>
+        <section id="doces" className="mt-10 space-y-4">
+          <header className="text-center">
+            <h2 className="font-brand text-3xl text-brand">Doces</h2>
+          </header>
+          <div className="grid grid-cols-2 gap-3">
+            {[
+              { name: "Biscoito amanteigado", src: "/brigadeiro.svg" },
+              { name: "Pão de mel", src: "/brigadeiro.svg" },
+              { name: "Alfajor", src: "/brigadeiro.svg" },
+              { name: "Pirulitos para Drinks", src: "/brigadeiro.svg" },
+            ].map((item) => (
+              <div
+                key={`doces-${item.name}`}
+                className="rounded-xl border border-zinc-200 bg-white p-2 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
+              >
+                <div className="aspect-square overflow-hidden rounded-lg bg-zinc-100">
+                  <Image
+                    src={item.src}
+                    alt={item.name}
+                    width={400}
+                    height={400}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="mt-2 text-center text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                  {item.name}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="cookies" className="mt-10 space-y-4">
+          <header className="text-center">
+            <h2 className="font-brand text-3xl text-brand">Cookies</h2>
+          </header>
+          <div className="grid grid-cols-2 gap-3">
+            {[
+              { name: "Cookie Nevado", src: "/brigadeiro.svg" },
+              { name: "Red Velvet", src: "/brigadeiro.svg" },
+              { name: "Tradicional", src: "/brigadeiro.svg" },
+              { name: "Pistache", src: "/brigadeiro.svg" },
+            ].map((item) => (
+              <div
+                key={`cookies-${item.name}`}
+                className="rounded-xl border border-zinc-200 bg-white p-2 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
+              >
+                <div className="aspect-square overflow-hidden rounded-lg bg-zinc-100">
+                  <Image
+                    src={item.src}
+                    alt={item.name}
+                    width={400}
+                    height={400}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="mt-2 text-center text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                  {item.name}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="salgados" className="mt-10 space-y-4">
+          <header className="text-center">
+            <h2 className="font-brand text-3xl text-brand">Salgados</h2>
+          </header>
+          <div className="grid grid-cols-2 gap-3">
+            {[
+              { name: "Pão picante", src: "/brigadeiro.svg" },
+              { name: "Pão quente", src: "/brigadeiro.svg" },
+              { name: "Pastelão", src: "/brigadeiro.svg" },
+              { name: "Salgadinhos- BK", src: "/brigadeiro.svg" },
+            ].map((item) => (
+              <div
+                key={`salg-${item.name}`}
+                className="rounded-xl border border-zinc-200 bg-white p-2 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
+              >
+                <div className="aspect-square overflow-hidden rounded-lg bg-zinc-100">
+                  <Image
+                    src={item.src}
+                    alt={item.name}
+                    width={400}
+                    height={400}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="mt-2 text-center text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                  {item.name}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </div>
