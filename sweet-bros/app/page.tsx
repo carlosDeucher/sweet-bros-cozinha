@@ -1,65 +1,145 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { WhatsAppIcon, InstagramIcon, MapPinIcon } from "@/components/icons";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen w-full bg-gradient-to-b from-brand/10 to-brand-secondary/10">
+      <div className="mx-auto w-full max-w-md px-4 pb-16 pt-10">
+        <section className="mb-10 text-center">
+          <div className="mx-auto inline-block rounded-2xl bg-white/60 px-4 py-2 shadow-sm backdrop-blur">
+            <span className="font-brand text-5xl leading-none text-brand">Sweet Bros</span>
+          </div>
+          <p className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-brand-secondary/80">
+            Doceria
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+          <div className="mt-6 flex items-center justify-center gap-3">
+            <Button href="https://wa.me/" target="_blank" rel="noopener noreferrer" variant="whatsapp" className="gap-2">
+              <WhatsAppIcon className="text-white" />
+              WhatsApp
+            </Button>
+            <Button
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="instagram"
+              className="gap-2"
+            >
+              <InstagramIcon className="text-white" />
+              Instagram
+            </Button>
+          </div>
+
+          <div className="mt-3 flex items-center justify-center text-sm text-zinc-600 dark:text-zinc-400">
+            <MapPinIcon size={16} className="mr-1 text-brand-secondary" />
+            Porto Belo, SC
+          </div>
+        </section>
+
+        <section id="brigadeiros" className="space-y-8">
+          <header className="text-center">
+            <h2 className="font-brand text-3xl text-brand">Brigadeiros</h2>
+          </header>
+
+          <div id="tradicionais" className="space-y-3">
+            <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Tradicionais</h3>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { name: "Tradicional", src: "/brigadeiro.svg" },
+                { name: "Branco", src: "/brigadeiro.svg" },
+                { name: "Meio Amargo", src: "/brigadeiro.svg" },
+                { name: "Coco", src: "/brigadeiro.svg" },
+              ].map((item) => (
+                <div
+                  key={`trad-${item.name}`}
+                  className="rounded-xl border border-zinc-200 bg-white p-2 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
+                >
+                  <div className="aspect-square overflow-hidden rounded-lg bg-zinc-100">
+                    <Image
+                      src={item.src}
+                      alt={item.name}
+                      width={400}
+                      height={400}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="mt-2 text-center text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                    {item.name}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div id="especiais" className="space-y-3">
+            <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Especiais</h3>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { name: "Churros", src: "/brigadeiro.svg" },
+                { name: "Oreo", src: "/brigadeiro.svg" },
+                { name: "Ninho", src: "/brigadeiro.svg" },
+                { name: "Paçoca", src: "/brigadeiro.svg" },
+              ].map((item) => (
+                <div
+                  key={`esp-${item.name}`}
+                  className="rounded-xl border border-zinc-200 bg-white p-2 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
+                >
+                  <div className="aspect-square overflow-hidden rounded-lg bg-zinc-100">
+                    <Image
+                      src={item.src}
+                      alt={item.name}
+                      width={400}
+                      height={400}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="mt-2 text-center text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                    {item.name}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div id="gourmet" className="space-y-3">
+            <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Gourmet</h3>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { name: "Pistache", src: "/brigadeiro.svg" },
+                { name: "Nutella", src: "/brigadeiro.svg" },
+                { name: "Ferrero", src: "/brigadeiro.svg" },
+                { name: "Avelã", src: "/brigadeiro.svg" },
+              ].map((item) => (
+                <div
+                  key={`gou-${item.name}`}
+                  className="rounded-xl border border-zinc-200 bg-white p-2 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
+                >
+                  <div className="aspect-square overflow-hidden rounded-lg bg-zinc-100">
+                    <Image
+                      src={item.src}
+                      alt={item.name}
+                      width={400}
+                      height={400}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="mt-2 text-center text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                    {item.name}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="pt-4 text-center">
+            <Button href="https://wa.me/" target="_blank" rel="noopener noreferrer" size="lg" variant="whatsapp" className="gap-2">
+              <WhatsAppIcon className="text-white" />
+              Peça pelo WhatsApp
+            </Button>
+          </div>
+        </section>
+      </div>
+    </main>
   );
 }
