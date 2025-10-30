@@ -30,11 +30,11 @@ export function Button({
   };
 
   const variants: Record<NonNullable<ButtonProps["variant"]>, string> = {
-    brand: "bg-brand text-black hover:bg-brand/80 focus-visible:ring-brand",
+    brand: "text-black bg-brand/80 focus-visible:ring-brand",
     outline:
-      "border border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800 focus-visible:ring-brand",
+      "border border-zinc-800 bg-zinc-900 text-zinc-100 hover:bg-zinc-800 focus-visible:ring-brand",
     ghost:
-      "bg-transparent text-zinc-900 hover:bg-zinc-100 dark:text-zinc-100 dark:hover:bg-zinc-800 focus-visible:ring-brand",
+      "bg-transparent text-zinc-100 hover:bg-zinc-800 focus-visible:ring-brand",
     whatsapp:
       "bg-[#25D366] text-white hover:bg-[#1ebe5b] focus-visible:ring-[#25D366]",
     instagram:

@@ -17,7 +17,7 @@ export default function ItemCard({ name, src }: ItemCardProps) {
           className="h-full w-full object-cover"
         />
       </div>
-      <div className="mt-2 text-center text-xl font-medium font-brand text-zinc-900 text-zinc-100">
+      <div className="mt-2 text-center text-xl font-medium font-brand text-zinc-100">
         {name}
       </div>
     </div>
