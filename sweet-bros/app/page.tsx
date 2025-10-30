@@ -3,6 +3,8 @@ import BrigadeirosSection from "./sections/BrigadeirosSection";
 import DocesSection from "./sections/DocesSection";
 import CookiesSection from "./sections/CookiesSection";
 import SalgadosSection from "./sections/SalgadosSection";
+import { Button } from "@/components/ui/button";
+import { WhatsAppIcon } from "@/components/icons";
 
 export default function Home() {
   return (
@@ -13,6 +15,13 @@ export default function Home() {
         <DocesSection />
         <CookiesSection />
         <SalgadosSection />
+
+        <div className="pt-12 text-center">
+        <Button href="https://wa.me/" target="_blank" rel="noopener noreferrer" size="lg" variant="whatsapp" className="gap-2">
+          <WhatsAppIcon className="text-white" />
+          Peça pelo WhatsApp
+        </Button>
+      </div>
       </div>
     </main>
   );

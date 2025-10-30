@@ -2,8 +2,6 @@ import SectionRoot from "./components/SectionRoot";
 import Subsection from "./components/Subsection";
 import ItemsGrid from "./components/ItemsGrid";
 import ItemCard from "./components/ItemCard";
-import { Button } from "@/components/ui/button";
-import { WhatsAppIcon } from "@/components/icons";
 
 export default function BrigadeirosSection() {
   const tradicionais = [
@@ -50,13 +48,6 @@ export default function BrigadeirosSection() {
           ))}
         </ItemsGrid>
       </Subsection>
-
-      <div className="pt-4 text-center">
-        <Button href="https://wa.me/" target="_blank" rel="noopener noreferrer" size="lg" variant="whatsapp" className="gap-2">
-          <WhatsAppIcon className="text-white" />
-          Peça pelo WhatsApp
-        </Button>
-      </div>
     </SectionRoot>
   );
 }
