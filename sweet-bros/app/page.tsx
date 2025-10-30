@@ -31,9 +31,9 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="mt-3 flex items-center justify-center text-sm text-zinc-600 dark:text-zinc-400">
-            <MapPinIcon size={16} className="mr-1 text-brand-secondary" />
-            Porto Belo, SC
+          <div className="mt-3 flex items-center justify-center text-md text-zinc-600 dark:text-zinc-400">
+            <MapPinIcon size={20} className="mr-1 text-brand-secondary" />
+            <span className="mb-[-2px] text-brand-secondary">Porto Belo, SC</span>
           </div>
         </section>
         
