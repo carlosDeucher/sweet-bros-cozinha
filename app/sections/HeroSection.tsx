@@ -1,23 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon, InstagramIcon, MapPinIcon } from "@/components/icons";
+import { WhatsAppBtn } from "@/components/feat/WhatsAppBtn";
 
 export default function HeroSection() {
   return (
     <section className="mb-10 text-center">
       <div className="mx-auto inline-block rounded-2xl bg-white/60 px-4 py-2 shadow-sm backdrop-blur">
-        <span className="font-brand text-5xl leading-none text-brand">Sweet Bros</span>
+        <span className="font-brand text-5xl leading-none text-brand">
+          Sweet Bros
+        </span>
       </div>
       <p className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-brand-secondary/80">
         Doceria
       </p>
 
       <div className="mt-6 flex items-center justify-center gap-3">
-        <Button href="https://wa.me/" target="_blank" rel="noopener noreferrer" variant="whatsapp" className="gap-2">
-          <WhatsAppIcon className="text-white" />
-          WhatsApp
-        </Button>
+        <WhatsAppBtn />
         <Button
-          href="https://instagram.com/"
+          href="https://www.instagram.com/sweetbrospb/"
           target="_blank"
           rel="noopener noreferrer"
           variant="instagram"
