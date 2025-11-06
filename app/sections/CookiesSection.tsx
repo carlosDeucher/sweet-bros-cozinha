@@ -4,17 +4,16 @@ import ItemCard from "./components/ItemCard";
 
 export default function CookiesSection() {
   const items = [
-    { name: "Cookie Nevado", src: "/brigadeiro.svg" },
-    { name: "Red Velvet", src: "/brigadeiro.svg" },
-    { name: "Tradicional", src: "/brigadeiro.svg" },
-    { name: "Pistache", src: "/brigadeiro.svg" },
+    { name: "Tradicionais", src: "/product-images/cookie-trad.png", desc: "Tradicional com Gotas de Chocolate Preto, Red Velvet com Gotas de Chocolate Branco, Chocolate Preto com  Gotas de Chocolate Branco." },
+    { name: "Cookie Nevado", src: "/product-images/cookie-nev.png", desc: "Cookie de Cacau com Pedaços de Chocolate ao Leite e Meio Amargo, Coberto com Glaçúcar." },
+    { name: "Cookie de Pistache", src: "/product-images/cookie-pistache.png", desc: "Cookie com Pedaços Generosos de Pistache." },
   ];
 
   return (
     <SectionRoot id="cookies" title="Cookies">
       <ItemsGrid>
         {items.map((item) => (
-          <ItemCard key={`cookies-${item.name}`} name={item.name} src={item.src} />
+          <ItemCard key={`cookies-${item.name}`} name={item.name} src={item.src} desc={item.desc} />
         ))}
       </ItemsGrid>
     </SectionRoot>

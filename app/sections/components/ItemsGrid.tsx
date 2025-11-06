@@ -5,5 +5,5 @@ type ItemsGridProps = {
 };
 
 export default function ItemsGrid({ children }: ItemsGridProps) {
-  return <div className="grid grid-cols-2 gap-3">{children}</div>;
+  return <div className="flex flex-row flex-wrap gap-y-4 gap-x-2">{children}</div>;
 }
