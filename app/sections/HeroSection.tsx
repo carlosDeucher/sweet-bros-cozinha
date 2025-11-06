@@ -11,7 +11,7 @@ export default function HeroSection() {
         </span>
       </div>
       <p className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-brand-secondary/80">
-        Doceria
+        Cozinha Artesanal
       </p>
 
       <div className="mt-6 flex items-center justify-center gap-3">

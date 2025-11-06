@@ -20,7 +20,7 @@ const brandScript = Pacifico({
 
 export const metadata: Metadata = {
   title: "Sweet Bros - Doceria",
-  description: "Doceria em Porto Belo - SC. Brigadeiros tradicionais, especiais e gourmet.",
+  description: "Cozinha Artesanal em Porto Belo - SC. Brigadeiros tradicionais, especiais e gourmet.",
 };
 
 export default function RootLayout({
